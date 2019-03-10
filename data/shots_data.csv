@@ -133,3 +133,6 @@
 65               1        New York Knicks   -7  13  Klay Thompson     35
 66               0           Phoenix Suns   -1   8  Klay Thompson     27
  [ reached getOption("max.print") -- omitted 3931 rows ]
+[1] "character"
+[1] "character"
+[1] "character"
