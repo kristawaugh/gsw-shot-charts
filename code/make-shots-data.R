@@ -8,37 +8,39 @@ library(caret)
 library(magrittr)
 setwd("/users/kristawaugh/Documents/Spring19/Stat133/workout01/code")
   
-iguodala00 <- read.csv("../data/andre-iguodala.csv", stringsAsFactors = FALSE, sep = ",")
-iguodala0 <- iguodala00 %>% mutate(shot_made_flag = recode(shot_made_flag, "y" = "shot_yes", "n" = "shot_no"))
-iguodala <- mutate(iguodala0, Name = "Andre Iguodala")
+iguodala000 <- read.csv("../data/andre-iguodala.csv", stringsAsFactors = FALSE, sep = ",")
+iguodala00 <- iguodala000 %>% mutate(shot_made_flag = recode(shot_made_flag, "y" = "shot_yes", "n" = "shot_no"))
+iguodala0 <- mutate(iguodala00, Name = "Andre Iguodala")
+iguodala <- mutate(iguodala0, minute = period * 12 + (12 - minutes_remaining))
 iguodala
 
 
-curry00 <- read.csv("../data/stephen-curry.csv", stringsAsFactors = FALSE, sep = ",")
-curry0 <- curry00 %>% mutate(shot_made_flag = recode(shot_made_flag, "y" = "shot_yes", "n" = "shot_no"))
-curry <- mutate(curry0, Name = "Stephen Curry")
+curry000 <- read.csv("../data/stephen-curry.csv", stringsAsFactors = FALSE, sep = ",")
+curry00 <- curry000 %>% mutate(shot_made_flag = recode(shot_made_flag, "y" = "shot_yes", "n" = "shot_no"))
+curry <- mutate(curry00, Name = "Stephen Curry")
+curry <- mutate(curry0, minute = period * 12 + (12 - minutes_remaining))
 curry
 
 
 
-green00 <- read.csv("../data/draymond-green.csv", stringsAsFactors = FALSE, sep = ",")
-green0 <- green00 %>% mutate(shot_made_flag = recode(shot_made_flag, "y" = "shot_yes", "n" = "shot_no"))
-green <- mutate(green0, Name = "Draymond Green")
+green000 <- read.csv("../data/draymond-green.csv", stringsAsFactors = FALSE, sep = ",")
+green00 <- green000 %>% mutate(shot_made_flag = recode(shot_made_flag, "y" = "shot_yes", "n" = "shot_no"))
+green0 <- mutate(green00, Name = "Draymond Green")
+green <- mutate(green0, minute = period * 12 + (12 - minutes_remaining))
 green
 
 
-durant00 <- read.csv("../data/kevin-durant.csv", stringsAsFactors = FALSE, sep = ",")
-durant0 <- green00 %>% mutate(shot_made_flag = recode(shot_made_flag, "y" = "shot_yes", "n" = "shot_no"))
-durant <- mutate(durant0, Name = "Kevin Durant")
+durant000 <- read.csv("../data/kevin-durant.csv", stringsAsFactors = FALSE, sep = ",")
+durant00 <- green000 %>% mutate(shot_made_flag = recode(shot_made_flag, "y" = "shot_yes", "n" = "shot_no"))
+durant0 <- mutate(durant00, Name = "Kevin Durant")
+durant <- mutate(durant0, minute = period * 12 + (12 - minutes_remaining))
 durant
 
 
-thompson00 <- read.csv("../data/klay-thompson.csv", stringsAsFactors = FALSE, sep = ",")
-thompson0 <- thompson00 %>% mutate(shot_made_flag = recode(shot_made_flag, "y" = "shot_yes", "n" = "shot_no"))
-thompson <- mutate(thompson0, Name = "Klay Thompson")
+thompson000 <- read.csv("../data/klay-thompson.csv", stringsAsFactors = FALSE, sep = ",")
+thompson00 <- thompson000 %>% mutate(shot_made_flag = recode(shot_made_flag, "y" = "shot_yes", "n" = "shot_no"))
+thompson0 <- mutate(thompson00, Name = "Klay Thompson")
+thompson <- mutate(thompson0, minute = period * 12 + (12 - minutes_remaining))
 thompson
-
-
-
 
 
