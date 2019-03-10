@@ -52,3 +52,8 @@ andre_shot_chart <- ggplot(data = iguodala) +
   ggtitle('Shot Chart: Andre Iguodala (2016 season)') + 
   theme_minimal()
 
+ggsave("../images/klay-thompson-shot-chart.pdf", width = 6.5, height = 5)
+ggsave("../images/stephen_curry-shot-chart.pdf", width = 6.5, height = 5)
+ggsave("../images/andre-iguodala-shot-chart.pdf", width = 6.5, height = 5)
+ggsave("../images/kevin-durant-shot-chart.pdf", width = 6.5, height = 5)
+ggsave("../images/draymond-green-shot-chart.pdf", width = 6.5, height = 5)
