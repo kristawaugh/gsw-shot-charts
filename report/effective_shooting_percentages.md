@@ -2,6 +2,12 @@ Effective Shooting Percentages
 ================
 Krista Waugh
 
+According to this [article](https://sircharlesincharge.com/2019/03/13/golden-state-warriors-serious-concern/) in *Fansided*, the Golden State Warriors main weakness is their defense, as the demonstrated in their recent loss against the Phoenix Suns. It is hard to admit that the Bay Area's beloved Warriors may have any weakness at all, so I wont. Here I have analyzed only the shooting percentages of the Warriors offensive players from their legendary 2016/2017 season. Is this a thorough analysis of the Warriors overall performance as a team? Not particularly, but it does bring to light some of what makes them one of the most talked about teams in NBA history: their undeniably high shooting success rates.
+
+The two years prior to the 2014/2015 season, the Warriors finished 6th in the league, and before that from the mid 90s until their 6th place finish in 2013, they were hanging out around 10th place overall. The 2016/2017 season was Kevin Durant’s first season with the Warriors, after playing for Oklahoma City Thunder for nine seasons, experiencing some tough losses to the Warriors during the Finals, and ultimately never winning a finals with OKC Thunder. Stephen Curry, Klay Thompson, Draymond Green, and Andre Iguodala are some of the most famous names in this new wave of Warriors fame, from what I understand as someone who sat through their first basketball game in the spring of 2015, along with what seems like the great majority of today’s Warrior fans.
+
+Understandably so, as the Bay Area is such a hub of technology, food, and entertainment- the Warriors had to be the best in order to take the spotlight among all the other stimulation present in the area. The sports industry is ultimately a business, and the number of Warriors jerseys sported around town during May and June indicate that business is booming. This can be attributed almost completely to how fun these men are to watch. People like basketball probably for a lot of reasons, but a big one is how fast paced it is. If you leave the room to grab a beer you will have missed something, unlike soccer or football. Being a Warriors fan for the sake of entertainment is great because they keep shooting and keep making it, which is what my analysis is centered around: shooting percentages.
+
 ``` r
 library(dplyr)
 ```
@@ -295,7 +301,7 @@ shots2pt_kd
     #   opponent <chr>, x <dbl>, y <dbl>, Name <chr>, minute <dbl>
 
 ``` r
-#346 rows
+#643 rows
 
 filter(shots2pt_kd, shot_made_flag == "shot_yes")
 ```
@@ -318,7 +324,7 @@ filter(shots2pt_kd, shot_made_flag == "shot_yes")
     #   opponent <chr>, x <dbl>, y <dbl>, Name <chr>, minute <dbl>
 
 ``` r
-#171 rows 
+#390 rows 
 
 #171/346 = 0.4942197
 ```
@@ -346,7 +352,7 @@ shots3pt_kd
     #   opponent <chr>, x <dbl>, y <dbl>, Name <chr>, minute <dbl>
 
 ``` r
-#232 rows
+#272 rows
 
 filter(shots3pt_kd, shot_made_flag == "shot_yes")
 ```
@@ -369,7 +375,7 @@ filter(shots3pt_kd, shot_made_flag == "shot_yes")
     #   opponent <chr>, x <dbl>, y <dbl>, Name <chr>, minute <dbl>
 
 ``` r
-#74 rows 
+#105 rows 
 
 #74/232 = 0.3189655
 ```
@@ -742,7 +748,7 @@ shots_kd
     #   opponent <chr>, x <dbl>, y <dbl>, Name <chr>, minute <dbl>
 
 ``` r
-#578 rows
+#915 rows
 
 filter(shots_kd, shot_made_flag == "shot_yes")
 ```
@@ -765,7 +771,7 @@ filter(shots_kd, shot_made_flag == "shot_yes")
     #   opponent <chr>, x <dbl>, y <dbl>, Name <chr>, minute <dbl>
 
 ``` r
-#245 rows 
+#495 rows 
 
 shots_draymond <- filter(shots_data, Name == "Draymond Green")
 shots_draymond
@@ -816,7 +822,7 @@ filter(shots_draymond, shot_made_flag == "shot_yes")
 ```
 
 ``` r
-shots2pt <- matrix(c("Curry","563","304", "53.99%","Durant", "346","171","49.4%","Green", "346","171","49.4%", "Iguodala", "210", "134", "63.8%", "Thompson", "640", "329", "51.4%"), ncol=4,byrow=TRUE)
+shots2pt <- matrix(c("Curry","563","304", "53.99%","Durant", "643","390","60.6%","Green", "346","171","49.4%", "Iguodala", "210", "134", "63.8%", "Thompson", "640", "329", "51.4%"), ncol=4,byrow=TRUE)
 colnames(shots2pt) <- c("name","total","made", "perc_made")
 table_shots2pt <- as.table(shots2pt)
 table_shots2pt
@@ -824,7 +830,7 @@ table_shots2pt
 
     ##   name     total made perc_made
     ## A Curry    563   304  53.99%   
-    ## B Durant   346   171  49.4%    
+    ## B Durant   643   390  60.6%    
     ## C Green    346   171  49.4%    
     ## D Iguodala 210   134  63.8%    
     ## E Thompson 640   329  51.4%
@@ -837,13 +843,13 @@ df2pt
 | name     | total | made | perc\_made |
 |:---------|:------|:-----|:-----------|
 | Curry    | 563   | 304  | 53.99%     |
-| Durant   | 346   | 171  | 49.4%      |
+| Durant   | 643   | 390  | 60.6%      |
 | Green    | 346   | 171  | 49.4%      |
 | Iguodala | 210   | 134  | 63.8%      |
 | Thompson | 640   | 329  | 51.4%      |
 
 ``` r
-shots3pt <- matrix(c("Curry","687","280", "40.7%","Durant", "232","74","31.9%","Green", "232","74","31.9%", "Iguodala", "161", "58", "36%", "Thompson", "580", "246", "42.4%"), ncol=4,byrow=TRUE)
+shots3pt <- matrix(c("Curry","687","280", "40.7%","Durant", "272","105","38.6%","Green", "232","74","31.9%", "Iguodala", "161", "58", "36%", "Thompson", "580", "246", "42.4%"), ncol=4,byrow=TRUE)
 colnames(shots3pt) <- c("name","total","made", "perc_made")
 table_shots3pt <- as.table(shots3pt)
 table_shots3pt
@@ -851,26 +857,26 @@ table_shots3pt
 
     ##   name     total made perc_made
     ## A Curry    687   280  40.7%    
-    ## B Durant   232   74   31.9%    
+    ## B Durant   272   105  38.6%    
     ## C Green    232   74   31.9%    
     ## D Iguodala 161   58   36%      
     ## E Thompson 580   246  42.4%
 
 ``` r
-df3pt <- knitr::kable(table_shots2pt, row.names = FALSE, caption = "Effective Shooting % by PLayer")
+df3pt <- knitr::kable(table_shots3pt, row.names = FALSE, caption = "Effective Shooting % by PLayer")
 df3pt
 ```
 
 | name     | total | made | perc\_made |
 |:---------|:------|:-----|:-----------|
-| Curry    | 563   | 304  | 53.99%     |
-| Durant   | 346   | 171  | 49.4%      |
-| Green    | 346   | 171  | 49.4%      |
-| Iguodala | 210   | 134  | 63.8%      |
-| Thompson | 640   | 329  | 51.4%      |
+| Curry    | 687   | 280  | 40.7%      |
+| Durant   | 272   | 105  | 38.6%      |
+| Green    | 232   | 74   | 31.9%      |
+| Iguodala | 161   | 58   | 36%        |
+| Thompson | 580   | 246  | 42.4%      |
 
 ``` r
-shots_total <- matrix(c("Curry","1250","584", "46.7%","Durant", "578","245","42.4%","Green", "578","245","42.4%", "Iguodala", "371", "192", "51.8%", "Thompson", "1220", "575", "47.1%"), ncol=4,byrow=TRUE)
+shots_total <- matrix(c("Curry","1250","584", "46.7%","Durant", "915","495","54.1%","Green", "578","245","42.4%", "Iguodala", "371", "192", "51.8%", "Thompson", "1220", "575", "47.1%"), ncol=4,byrow=TRUE)
 colnames(shots_total) <- c("name","total","made", "perc_made")
 table_shots_total <- as.table(shots_total)
 table_shots_total
@@ -878,7 +884,7 @@ table_shots_total
 
     ##   name     total made perc_made
     ## A Curry    1250  584  46.7%    
-    ## B Durant   578   245  42.4%    
+    ## B Durant   915   495  54.1%    
     ## C Green    578   245  42.4%    
     ## D Iguodala 371   192  51.8%    
     ## E Thompson 1220  575  47.1%
@@ -891,7 +897,7 @@ df_shots_total
 | name     | total | made | perc\_made |
 |:---------|:------|:-----|:-----------|
 | Curry    | 1250  | 584  | 46.7%      |
-| Durant   | 578   | 245  | 42.4%      |
+| Durant   | 915   | 495  | 54.1%      |
 | Green    | 578   | 245  | 42.4%      |
 | Iguodala | 371   | 192  | 51.8%      |
 | Thompson | 1220  | 575  | 47.1%      |
