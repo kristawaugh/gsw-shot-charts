@@ -9,7 +9,45 @@ The two years prior to the 2014/2015 season, the Warriors finished 6th in the le
 
 Understandably so, as the Bay Area is such a hub of technology, food, and entertainment- the Warriors had to be the best in order to take the spotlight among all the other stimulation present in the area. The sports industry is ultimately a business, and the number of Warriors jerseys sported around town during May and June indicate that business is booming. This can be attributed almost completely to how fun these men are to watch. People like basketball probably for a lot of reasons, but a big one is how fast paced it is. If you leave the room to grab a beer you will have missed something, unlike soccer or football. Being a Warriors fan for the sake of entertainment is great because they keep shooting and keep making it, which is what my analysis is centered around: shooting percentages. 
 
+Below is a series of charts depicting shots made by Andre Iguodala, Draymond Green, Kevin Durant, Klay Thompson, and Stephen Curry during their 2016/2017 season. A red dot indicates that the shot did not go in, and a blue dot indicates that the shot resulted in either a two point field goal (if the dot is within the three point line that forms an ellipse encapsulating the other lines in the bottom area of each half court image) or a three point field goal “three pointer” (if the dot is behind the three point line).  Free throws are not included in this data. 
 
 ```{r}
 knitr::include_graphics("gsw-shot-charts.png")
 ```
+
+While Kevin Durant, Stephen Curry, and Klay Thompson might be the most widely known for their shooting skills, Andre Iguodala actually has the highest percentage of two point field goals made of the five players included in this analysis, with a 63.8% success rate, with Kevin Durant behind him at 60.6%.  However, Durant leads the team with his overall percentage, which includes three pointers. Klay Thompson has the best three-pointer success rate at 42.2%. 
+
+```{r echo = FALSE}
+shots2pt <- matrix(c("Curry","563","304", "53.99%","Durant", "643","390","60.6%","Green", "346","171","49.4%", "Iguodala", "210", "134", "63.8%", "Thompson", "640", "329", "51.4%"), ncol=4,byrow=TRUE)
+colnames(shots2pt) <- c("name","total","made", "perc_made")
+table_shots2pt <- as.table(shots2pt)
+table_shots2pt
+   
+shots3pt <- matrix(c("Curry","687","280", "40.7%","Durant", "272","105","38.6%","Green", "232","74","31.9%", "Iguodala", "161", "58", "36%", "Thompson", "580", "246", "42.4%"), ncol=4,byrow=TRUE)
+colnames(shots3pt) <- c("name","total","made", "perc_made")
+table_shots3pt <- as.table(shots3pt)
+table_shots3pt
+
+shots_total <- matrix(c("Curry","1250","584", "46.7%","Durant", "915","495","54.1%","Green", "578","245","42.4%", "Iguodala", "371", "192", "51.8%", "Thompson", "1220", "575", "47.1%"), ncol=4,byrow=TRUE)
+colnames(shots_total) <- c("name","total","made", "perc_made")
+table_shots_total <- as.table(shots_total)
+table_shots_total
+
+
+```
+
+```{r echo=FALSE}
+df2pt <- knitr::kable(table_shots2pt, row.names = FALSE, caption = "Effective Shooting % by PLayer")
+df2pt
+```
+
+```{r echo=FALSE}
+df3pt <- knitr::kable(table_shots3pt, row.names = FALSE, caption = "Effective Shooting % by PLayer")
+df3pt
+```
+
+```{r echo=FALSE}
+df_shots_total <- knitr::kable(table_shots_total, row.names = FALSE, caption = "Effective Shooting % by PLayer")
+df_shots_total
+```
+
