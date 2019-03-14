@@ -1,5 +1,6 @@
 Narrative
 ================
+Krista Waugh
 
 According to this [article](https://sircharlesincharge.com/2019/03/13/golden-state-warriors-serious-concern/) in *Fansided*, the Golden State Warriors main weakness is their defense, as the demonstrated in their recent loss against the Phoenix Suns. It is hard to admit that the Bay Area's beloved Warriors may have any weakness at all, so I wont. Here I have analyzed only the shooting percentages of the Warriors offensive players from their legendary 2016/2017 season. Is this a thorough analysis of the Warriors overall performance as a team? Not particularly, but it does bring to light some of what makes them one of the most talked about teams in NBA history: their undeniably high shooting success rates.
 
@@ -17,26 +18,7 @@ knitr::include_graphics("gsw-shot-charts.png")
 
 While Kevin Durant, Stephen Curry, and Klay Thompson might be the most widely known for their shooting skills, Andre Iguodala actually has the highest percentage of two point field goals made of the five players included in this analysis, with a 63.8% success rate, with Kevin Durant behind him at 60.6%. However, Durant leads the team with his overall percentage, which includes three pointers. Klay Thompson has the best three-pointer success rate at 42.2%.
 
-    ##   name     total made perc_made
-    ## A Curry    563   304  53.99%   
-    ## B Durant   643   390  60.6%    
-    ## C Green    346   171  49.4%    
-    ## D Iguodala 210   134  63.8%    
-    ## E Thompson 640   329  51.4%
-
-    ##   name     total made perc_made
-    ## A Curry    687   280  40.7%    
-    ## B Durant   272   105  38.6%    
-    ## C Green    232   74   31.9%    
-    ## D Iguodala 161   58   36%      
-    ## E Thompson 580   246  42.4%
-
-    ##   name     total made perc_made
-    ## A Curry    1250  584  46.7%    
-    ## B Durant   915   495  54.1%    
-    ## C Green    578   245  42.4%    
-    ## D Iguodala 371   192  51.8%    
-    ## E Thompson 1220  575  47.1%
+The full set of shooting percentages for the five players can be seen below, caption options seem to only be useful for knitting HTML and Latex. The first table is "Effective 2 Pointer Shooting % by Player", the second is "Effective 3 Pointer Shooting % by Player", and the third is "Effective Total Shooting % by Player".
 
 | name     | total | made | perc\_made |
 |:---------|:------|:-----|:-----------|

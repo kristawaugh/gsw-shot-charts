@@ -1,5 +1,6 @@
 ---
 title: "Narrative"
+author: Krista Waugh
 output: github_document
 ---
 
@@ -17,7 +18,9 @@ knitr::include_graphics("gsw-shot-charts.png")
 
 While Kevin Durant, Stephen Curry, and Klay Thompson might be the most widely known for their shooting skills, Andre Iguodala actually has the highest percentage of two point field goals made of the five players included in this analysis, with a 63.8% success rate, with Kevin Durant behind him at 60.6%.  However, Durant leads the team with his overall percentage, which includes three pointers. Klay Thompson has the best three-pointer success rate at 42.2%. 
 
-```{r echo = FALSE}
+The full set of shooting percentages for the five players can be seen below, caption options seem to only be useful for knitting HTML and Latex. The first table is "Effective 2 Pointer Shooting % by Player", the second is "Effective 3 Pointer Shooting % by Player", and the third is "Effective Total Shooting % by Player". 
+
+```{r echo=FALSE, results='hide'}
 shots2pt <- matrix(c("Curry","563","304", "53.99%","Durant", "643","390","60.6%","Green", "346","171","49.4%", "Iguodala", "210", "134", "63.8%", "Thompson", "640", "329", "51.4%"), ncol=4,byrow=TRUE)
 colnames(shots2pt) <- c("name","total","made", "perc_made")
 table_shots2pt <- as.table(shots2pt)
@@ -37,17 +40,19 @@ table_shots_total
 ```
 
 ```{r echo=FALSE}
-df2pt <- knitr::kable(table_shots2pt, row.names = FALSE, caption = "Effective Shooting % by PLayer")
+df2pt <- knitr::kable(table_shots2pt, row.names = FALSE, caption = "Effective 2 Pointer Shooting % by PLayer", format = 'pandoc')
 df2pt
 ```
 
 ```{r echo=FALSE}
-df3pt <- knitr::kable(table_shots3pt, row.names = FALSE, caption = "Effective Shooting % by PLayer")
+df3pt <- knitr::kable(table_shots3pt, row.names = FALSE, caption = "Effective 3 Pointer Shooting % by PLayer", format = 'pandoc')
 df3pt
 ```
 
 ```{r echo=FALSE}
-df_shots_total <- knitr::kable(table_shots_total, row.names = FALSE, caption = "Effective Shooting % by PLayer")
+df_shots_total <- knitr::kable(table_shots_total, row.names = FALSE, caption = "Effective Shooting % by Player", format = 'pandoc')
 df_shots_total
 ```
+
+
 
