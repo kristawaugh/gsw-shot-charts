@@ -8,13 +8,9 @@ The two years prior to the 2014/2015 season, the Warriors finished 6th in the le
 
 Understandably so, as the Bay Area is such a hub of technology, food, and entertainment- the Warriors had to be the best in order to take the spotlight among all the other stimulation present in the area. The sports industry is ultimately a business, and the number of Warriors jerseys sported around town during May and June indicate that business is booming. This can be attributed almost completely to how fun these men are to watch. People like basketball probably for a lot of reasons, but a big one is how fast paced it is. If you leave the room to grab a beer you will have missed something, unlike soccer or football. Being a Warriors fan for the sake of entertainment is great because they keep shooting and keep making it, which is what my analysis is centered around: shooting percentages.
 
-Below is a series of charts depicting shots made by Andre Iguodala, Draymond Green, Kevin Durant, Klay Thompson, and Stephen Curry during their 2016/2017 season. A red dot indicates that the shot did not go in, and a blue dot indicates that the shot resulted in either a two point field goal (if the dot is within the three point line that forms an ellipse encapsulating the other lines in the bottom area of each half court image) or a three point field goal “three pointer” (if the dot is behind the three point line). Free throws are not included in this data.
+The purpose of this report is to take a closer look at shooting success rates, while keeping in mind the business of basketball, not just the game. Earlier in the semester, my class (Stat 133 at UC Berkeley) discussed the “cost per point” factor of players. You want better players on your team, but then you have to pay them more. We don’t look at salary in this analysis but during the time I spent working on this project I pondered whether as an NBA team owner, would you prefer players who win games with consistent and unrelenting shooting success close to the net, or players who make the crowd go wild with crazy three pointers? Do you want predictability of winning or do you want to work from more of an entertainment industry standpoint? Who ultimately makes more money for the Warriors, and is that the same player who gets paid the most by the Warriors?
 
-``` r
-knitr::include_graphics("gsw-shot-charts.png")
-```
-
-<img src="gsw-shot-charts.png" width="2400" />
++Kevin Durant $26,540,100 +Klay Thompson $16,663,575 +Draymond Green $15,330,435 +Stephen Curry $12,112,359 +Andre Iguodala $11,131,368
 
 While Kevin Durant, Stephen Curry, and Klay Thompson might be the most widely known for their shooting skills, Andre Iguodala actually has the highest percentage of two point field goals made of the five players included in this analysis, with a 63.8% success rate, with Kevin Durant behind him at 60.6%. However, Durant leads the team with his overall percentage, which includes three pointers. Klay Thompson has the best three-pointer success rate at 42.2%.
 
@@ -43,3 +39,11 @@ The full set of shooting percentages for the five players can be seen below, cap
 | Green    | 578   | 245  | 42.4%      |
 | Iguodala | 371   | 192  | 51.8%      |
 | Thompson | 1220  | 575  | 47.1%      |
+
+Below is a series of charts depicting shots made by Andre Iguodala, Draymond Green, Kevin Durant, Klay Thompson, and Stephen Curry during their 2016/2017 season. A red dot indicates that the shot did not go in, and a blue dot indicates that the shot resulted in either a two point field goal (if the dot is within the three point line that forms an ellipse encapsulating the other lines in the bottom area of each half court image) or a three point field goal “three pointer” (if the dot is behind the three point line). Free throws are not included in this data.
+
+``` r
+knitr::include_graphics("gsw-shot-charts.png")
+```
+
+<img src="gsw-shot-charts.png" width="2400" />
