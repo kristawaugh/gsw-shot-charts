@@ -30,6 +30,12 @@ library(knitr)
 ```
 
 ``` r
+knitr::include_graphics("gsw-shot-charts.png")
+```
+
+<img src="gsw-shot-charts.png" width="2400" />
+
+``` r
 setwd("/Users/kristawaugh/Documents/Spring19/Stat133/workout01/report")
 shots_data <- read_csv("shots_data.csv", col_names = TRUE)
 ```
